@@ -5,17 +5,17 @@ x = random.randint(1,10)
 number = int(input("Enter a Number 1-10: "))
 i = number
 while i == int(x):
+    if i == int(x): 
         print("{i} is correct")
-        i += number
+        break
+    i += number
 else:
     print("Incorrect, guess again")
-number = int(input("Enter a Number 1-10: "))
+    number = int(input("Enter a Number 1-10: "))
 if number < int(x):
     print("Less than {number}")
 else:
     print("Greater than {number}")
-
- 
 
 
 
