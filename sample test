@@ -1,4 +1,4 @@
-def occupied(x,y,t):
+""" def occupied(x,y,t):
     found = 0
     for i in range(x):
         if(y[i]) == "C" and t[i]=="C":
@@ -6,4 +6,7 @@ def occupied(x,y,t):
 print(found)
 
 occupied(5, "CC..C", ".CC..")
-occupied(7, "CCCCCCC", "C.C.C.C")
+occupied(7, "CCCCCCC", "C.C.C.C") """
+
+def language (english,french):
+    

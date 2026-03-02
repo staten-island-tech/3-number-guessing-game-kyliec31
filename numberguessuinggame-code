@@ -4,22 +4,19 @@ x = random.randint(1,10)
 
 number = int(input("Enter a Number 1-10: "))
 i = number
-while i == int(x):
-    if i == int(x): 
-        print("{i} is correct")
-        break
+while i == int(number):
+    if i == int(number): 
+        print((number) "is correct")
     i += number
+else:
+    print("Incorrect, guess again")
+    number = int(input("Enter a Number 1-10: "))
 
     if number < int(x):
         print("Greater than {number}")
     else:
 
         print("Less than {number}")
-else:
-    print("Incorrect, guess again")
-    number = int(input("Enter a Number 1-10: "))
-
-
 
 
 
