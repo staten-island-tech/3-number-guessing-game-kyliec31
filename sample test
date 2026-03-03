@@ -8,5 +8,17 @@ print(found)
 occupied(5, "CC..C", ".CC..")
 occupied(7, "CCCCCCC", "C.C.C.C") """
 
+text = str(input("Enter Text:"))
+t = 0
+s = 0
 def language (english,french):
-    
+    for letter in text:
+        if letter.lower() == "s":
+            s+=1
+        elif letter == "t" or "T":
+            t+=1
+
+
+
+
+
