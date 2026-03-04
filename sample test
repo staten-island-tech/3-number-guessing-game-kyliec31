@@ -1,22 +1,40 @@
-""" def occupied(x,y,t):
+""" def occupied (x,y,t):
+
     found = 0
     for i in range(x):
-        if(y[i]) == "C" and t[i]=="C":
-            found == 1
-print(found)
+        if y[i] == "C" and t[i]== "C":
+            found += 1
+    return found
 
-occupied(5, "CC..C", ".CC..")
-occupied(7, "CCCCCCC", "C.C.C.C") """
+result1= occupied(5,"CC..CC", ".CC..")
+result2 = occupied(7,"CCCCCCC", "C.C.C.C")
+print(result1)
+print(result2) """
 
-text = str(input("Enter Text:"))
-t = 0
-s = 0
-def language (english,french):
+def identify_language(text):
+    english = 0
+    french = 0
+
     for letter in text:
-        if letter.lower() == "s":
-            s+=1
-        elif letter == "t" or "T":
-            t+=1
+        if letter == "t" or letter == "T":
+            english += 1
+        elif letter == "s" or letter == "S":
+            french += 1
+
+    if english > french:
+        return "English"
+    else:
+        return "French"
+    
+text1 = identify_language("The red cat sat on the mat.Why are you so sad cat?Don't ask that.")
+print(text1)
+
+text2 = identify_language("Lorsque j'avais six ans j'ai vu, une fois, une magnifique image, dans un livre")
+print(text2)
+
+text3 = identify_language("Si je discernais ta voix encore Connaissant ce coeur qui doute, Tu me dirais de tirer un trait Quoi que partir me coute.")
+print(text3)
+
 
 
 
