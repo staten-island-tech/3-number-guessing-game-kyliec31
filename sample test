@@ -11,30 +11,50 @@ result2 = occupied(7,"CCCCCCC", "C.C.C.C")
 print(result1)
 print(result2) """
 
-def identify_language(text):
+""" def identify_language(text):
     english = 0
     french = 0
 
     for letter in text:
-        if letter == "t" or letter == "T":
+        if letter.lower() == "t":
             english += 1
-        elif letter == "s" or letter == "S":
+        elif letter.lower() == "s":
             french += 1
 
     if english > french:
-        return "English"
+        print("English")
     else:
-        return "French"
+        print("French")
     
-text1 = identify_language("The red cat sat on the mat.Why are you so sad cat?Don't ask that.")
-print(text1)
+    text1 = identify_language("The red cat sat on the mat. Why are you so sad cat? Don't ask that.")
+    print(text1)
+    text2 = identify_language("Lorsque j'avais six ans j'ai vu, une fois, une magnifique image, dans un livre")
+    print(text2)
+    text3 = identify_language("Si je discernais ta voix encore Connaissant ce coeur qui doute, Tu me dirais de tirer un trait Quoi que partir me coute.")
+    print(text3) """
 
-text2 = identify_language("Lorsque j'avais six ans j'ai vu, une fois, une magnifique image, dans un livre")
-print(text2)
-
-text3 = identify_language("Si je discernais ta voix encore Connaissant ce coeur qui doute, Tu me dirais de tirer un trait Quoi que partir me coute.")
-print(text3)
-
+def numb_honi(input):
+    H = 0
+    O = 0
+    N = 0
+    I = 0
+    for letter in input:
+        if letter == "H":
+            H += 1
+        if letter == "O":
+            O += 1
+        if letter == "N":
+            N += 1
+        if letter == "I":
+            I += 1
+    search = 0
+        
+input1 = numb_honi("MAGNUS")
+print(input1)
+input2 = numb_honi("HHHHOOOONNNNIIII")
+print(input2)
+input3 = numb_honi("PROHODNIHODNIK")
+print(input3)
 
 
 
