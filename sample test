@@ -33,7 +33,7 @@ print(result2) """
     text3 = identify_language("Si je discernais ta voix encore Connaissant ce coeur qui doute, Tu me dirais de tirer un trait Quoi que partir me coute.")
     print(text3) """
 
-def numb_honi(input):
+""" def numb_honi(input):
     H = 0
     O = 0
     N = 0
@@ -47,16 +47,53 @@ def numb_honi(input):
             N += 1
         if letter == "I":
             I += 1
-    search = 0
+search = 0
         
 input1 = numb_honi("MAGNUS")
 print(input1)
 input2 = numb_honi("HHHHOOOONNNNIIII")
 print(input2)
 input3 = numb_honi("PROHODNIHODNIK")
-print(input3)
+print(input3) """
 
+""" def numb_honi(word):
+    count = 0
+    state = 0
+    for char in word:
+        if state == 0 and char.upper() == 'H':
+            state = 1
+        elif state == 1 and char.upper() == 'O':
+            state = 2
+        elif state == 2 and char.upper() == 'N':
+            state == 3
+        elif state == 3 and char.upper() == 'I':
+            count +=1
+            state = 0
+    print(count)
+    print(state)
+word1 = numb_honi("MAGNUS")
+print(word1)
+word2 = numb_honi("HHHHOOOONNNNIIII")
+print(word2)
+word3 = numb_honi("PROHODNIHODNIK")
+print(word3) """
 
+def numb_honi(word):
+    HONI = ["H", "O", "N", "I"]
+    count = 0
+    state = 0
+    for char in word:
+        if HONI[state] == char.upper():
+            state += 1
+            if state >= 4:
+                state = 0
+                count += 1
+    print(count)
 
-
+word1 = numb_honi("MAGNUS")
+print(word1)
+word2 = numb_honi("HHHHOOOONNNNIIII")
+print(word2)
+word3 = numb_honi("PROHODNIHODNIK")
+print(word3)
 
