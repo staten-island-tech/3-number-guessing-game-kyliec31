@@ -90,10 +90,7 @@ def numb_honi(word):
                 count += 1
     print(count)
 
-word1 = numb_honi("MAGNUS")
-print(word1)
-word2 = numb_honi("HHHHOOOONNNNIIII")
-print(word2)
-word3 = numb_honi("PROHODNIHODNIK")
-print(word3)
+numb_honi("MAGNUS")
+numb_honi("HHHHOOOONNNNIIII")
+numb_honi("PROHODNIHODNIK")
 

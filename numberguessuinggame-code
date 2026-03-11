@@ -2,23 +2,28 @@ import random
 x = random.randint(1,10)
 """ x= [1,2,3,4,5,6,7,8,9,10] """
 
-guess = int(input("Enter a Number 1-10: "))
+guess = 0
 guess_history = []
 
-while guess == x:
-    print("correct")
-    guess_history.append(guess)
-    print(f"{guess_history}")
-    break
-    
-else:
-    if guess < x:
-        print("Too high")
-    elif guess > x:
-        print("Too low")
-
-    print("Incorrect, guess again")
+while guess != x:
     guess = int(input("Enter a Number 1-10: "))
+
+    if guess < x:
+        print("Higher")
+        guess_history.append(guess)
+    elif guess > x:
+        print("Lower")
+        guess_history.append(guess)
+    
+    else:
+        print("Correct!")
+
+        print("Here is your guess history: ")
+        print(f"{guess_history}")
+    
+    
+
+
 
 
 
